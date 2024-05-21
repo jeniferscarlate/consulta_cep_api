@@ -12,7 +12,7 @@ As APIs possuem alguns elementos que servem à sua utilização:
 
 - **Parâmetros**: são informações ou filtros que servem para enviar dados da consulta ou para serem processados pela API. Os parâmetros podem ser passados para a API através da URL ou no corpo (body) da requisição. Exemplo: <https://dadosabertos.camara.leg.br/api/v2/deputados?nome=tiririca>
 
-- **Métodos**: são as formas de consumo de uma API, que podem ser:
+- **Métodos**: são as formas de consumo de uma API, que podem ser:  
 
 - _POST_: inserção de dados (**C**REATE)  
 - _GET_: obtenção de dados (**R**EAD)  
