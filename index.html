@@ -13,7 +13,7 @@
 
         <div class="controle-formu">
             <label for="cep">CEP:</label>
-            <input type="text" id="cep">
+            <input type="text" id="cep" placeholder="Digite o CEP aqui" onblur="consultaCEP(this.value)">
         </div>
 
         <div class="controle-form">
@@ -38,7 +38,12 @@
 
     </form>
 
-
     <script src="script.js"></script>
+    <!-- <script>
+        document.querySelector('#cep').addEventListener('blur', () => {
+            const cep = document.querySelector('#cep').value;
+            consultaCEP(cep);
+        });
+    </script> -->
 </body>
 </html>
