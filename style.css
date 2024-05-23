@@ -50,6 +50,11 @@ input[type="text"]:focus {
 
 button {
     margin-top: 30px;
+    margin-left: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border-color: #007bff;
 }
 
 

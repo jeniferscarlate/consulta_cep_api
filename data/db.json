@@ -1,0 +1,36 @@
+{
+  "endereco": [
+    {
+      "cep": "05264030",
+      "logradouro": "Rua Rafael Armenise",
+      "bairro": "Vila Sulina",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "id": "dc8e"
+    },
+    {
+      "cep": "18608540",
+      "logradouro": "Rua Nossa Senhora de Fátima",
+      "bairro": "Vila Antártica",
+      "cidade": "Botucatu",
+      "uf": "SP",
+      "id": "9d48"
+    },
+    {
+      "cep": "08330570",
+      "logradouro": "Rua Escorpião",
+      "bairro": "Cidade Satélite Santa Bárbara",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "id": "7866"
+    },
+    {
+      "id": "20f1",
+      "cep": "04266060",
+      "logradouro": "Rua Moreira",
+      "bairro": "Ipiranga",
+      "cidade": "São Paulo",
+      "uf": "SP"
+    }
+  ]
+}

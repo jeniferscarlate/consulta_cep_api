@@ -58,33 +58,39 @@ function limpaForm() {
     });
 }
 
+function pesquisarPorLogradouro() {
+    const uf = document.querySelector('#uf').value;
+    const cidade = document.querySelector('#cidade').value;
+    const logradouro = document.querySelector('#logradouro').value;
 
+    console.log('UF:', uf);
+    console.log('Cidade:', cidade);
+    console.log('Logradouro:', logradouro);
 
-function pesquisaRua(uf, cidade, logradouro) {
-    const requisicao2 = new Request(`https://viacep.com.br/ws/${uf}/${cidade}/${logradouro}/json`, {
-        // "method": "GET",
-        // "headers": {
-        // "Content-type": "application/json"
-        // }
-    }
     
-);
-console.log(requisicao2);
+    if(uf && cidade && logradouro){
+        
+        fetch(`https://viacep.com.br/ws/${uf}/${cidade}/${logradouro}/json`)
+        .then(resposta => resposta.json())
+        .then(data => {
+            if(data.length > 0) {
+                const primeiroCEP = data[0];
+                preencherForm(primeiroCEP);
+            }
+            else {
+                alert('CEP não encontrado com o logradouro digitado.');
+            }
+        }
+    )};
+
 }
 
-
-
-
-
-//     fetch(requisicao2).then(resposta => resposta.json()).then(resposta => {
-//         document.querySelector('#logradouro').value = (resposta.logradouro);
-//         document.querySelector('#cidade').value = (resposta.localidade);
-//         document.querySelector('#uf').value = (resposta.uf);
-//     })
-
-//     console.log(requisicao2);
-// }
-
-document.getElementById('pesquisaRua').addEventListener('click', pesquisaRua());
+function preencherForm(cepData) {
+    document.querySelector('#cep').value = cepData.cep;
+    document.querySelector('#logradouro').value = cepData.logradouro;
+    document.querySelector('#bairro').value = cepData.bairro;
+    document.querySelector('#cidade').value = cepData.localidade;
+    document.querySelector('#uf').value = cepData.uf;
+}
 
 
