@@ -59,13 +59,14 @@ function limpaForm() {
 }
 
 function pesquisarPorLogradouro() {
+
     const uf = document.querySelector('#uf').value;
     const cidade = document.querySelector('#cidade').value;
     const logradouro = document.querySelector('#logradouro').value;
 
-    console.log('UF:', uf);
-    console.log('Cidade:', cidade);
-    console.log('Logradouro:', logradouro);
+    // console.log('UF:', uf);
+    // console.log('Cidade:', cidade);
+    // console.log('Logradouro:', logradouro);
 
     
     if(uf && cidade && logradouro){
@@ -86,11 +87,35 @@ function pesquisarPorLogradouro() {
 }
 
 function preencherForm(cepData) {
+
     document.querySelector('#cep').value = cepData.cep;
     document.querySelector('#logradouro').value = cepData.logradouro;
     document.querySelector('#bairro').value = cepData.bairro;
     document.querySelector('#cidade').value = cepData.localidade;
     document.querySelector('#uf').value = cepData.uf;
+
 }
 
+function cadastrarCep(enderecoCompleto) {
 
+    fetch('http://localhost:3000/endereco', {
+        "method": "POST",
+        "headers":{
+            "Content-Type": "aplication/json"
+        },
+        "body": JSON.stringify(enderecoCompleto)
+    }).then(resposta => {
+        resposta.ok ? alert('Endereço cadastrado!') : alert('Erro:' + resposta.status) 
+    })
+
+}
+
+function atualizarCep(enderecoCompleto) {
+    fetch('http://localhost:3000/endereco', {
+        "method": "PUT",
+        "headers":{
+            "Content-Type": "aplication/json"
+        },
+
+    })
+}

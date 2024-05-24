@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Consulta CEP</title>
+    <title>Cadastro de cep</title>
 </head>
 <body>
-    <h1>Consulta de CEP</h1>
+
+    <h1>Cadastrar CEP</h1>
 
     <form action="">
 
         <div class="controle-form">
             <label for="cep">CEP:</label>
-            <input type="text" id="cep" placeholder="Digite o CEP aqui" onblur="consultaCEP(this.value)">
+            <input type="text" id="cep" placeholder="Digite o CEP aqui">
         </div>
 
         <div class="controle-form">
@@ -36,20 +37,34 @@
             <input type="text" id="uf">
         </div>
 
-        <button type="button" id="pesquisaRua" onclick="pesquisarPorLogradouro()">
-            Pesquisar CEP pelo logradouro
-        </button>
+        <div class="botoes">
+            <button type="button" id="btCadastrar">
+                Cadastrar CEP
+            </button>
+            <button type="reset">
+                Limpar
+            </button>
+        </div>
+
+        <a href="atualizar_cep.html">Atualizar CEP</a>
 
     </form>
 
-   
-
     <script src="script.js"></script>
-    <!-- <script>
-        document.querySelector('#cep').addEventListener('blur', () => {
-            const cep = document.querySelector('#cep').value;
-            consultaCEP(cep);
+
+    <script>
+        document.querySelector('#btCadastrar').addEventListener('click', () => {
+
+            const enderecoCompleto = {
+                "cep": document.querySelector('#cep').value,
+                "logradouro": document.querySelector('#logradouro').value,
+                "bairro": document.querySelector('#bairro').value,
+                "cidade": document.querySelector('#cidade').value,
+                "uf": document.querySelector('#uf').value
+            }
+
+            cadastrarCep(enderecoCompleto);
         });
-    </script> -->
+    </script>
 </body>
 </html>

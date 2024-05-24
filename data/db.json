@@ -31,6 +31,46 @@
       "bairro": "Ipiranga",
       "cidade": "São Paulo",
       "uf": "SP"
+    },
+    {
+      "id": "72ab",
+      "cep": "05073001",
+      "logradouro": "Rua Doze de Outubro",
+      "bairro": "Lapa",
+      "cidade": "São Paulo",
+      "uf": "SP"
+    },
+    {
+      "id": "00d2",
+      "cep": "",
+      "logradouro": "",
+      "bairro": "",
+      "cidade": "",
+      "uf": ""
+    },
+    {
+      "id": "2cc4",
+      "cep": "",
+      "logradouro": "",
+      "bairro": "",
+      "cidade": "",
+      "uf": ""
+    },
+    {
+      "id": "f5a1",
+      "cep": "",
+      "logradouro": "",
+      "bairro": "",
+      "cidade": "",
+      "uf": ""
+    },
+    {
+      "id": "a0eb",
+      "cep": "",
+      "logradouro": "",
+      "bairro": "",
+      "cidade": "",
+      "uf": ""
     }
   ]
 }
