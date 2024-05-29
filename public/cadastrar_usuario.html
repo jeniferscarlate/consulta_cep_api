@@ -3,33 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Cadastrar usuário</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cadastrar Usuário</title>
 </head>
 <body>
-    <form action="">
-        <label for="nome">Nome</label>
-        <input type="text">
-        
-        <br>
-        <label for="sobrenome">Sobrenome</label>
-        <input type="text">
+    <div class="container">
+        <div class="card">
+            <h1>Cadastrar</h1>
 
-        <br>
-        <label for="E-mail">E-mail</label>
-        <input type="email">
-        
-        <br>
-        <label for="senha">Senha</label>
-        <input type="password">
+            <div id="msgError"></div>
+            <div id="msgSuccess"></div>
 
-        <br>
-        <label for="Confirmar-senha">Confirmar Senha</label>
-        <input type="password">
+            <div class="label-float">
+                <input type="text" id="nome" placeholder="" required>
+                <label id="labelNome" for="Nome">Nome</label>
+            </div>
 
-        <button>Cadastrar Usuário</button>
+            <div class="label-float">
+                <input type="email" id="email" placeholder="" required>
+                <label id="labelEmail" for="E-mail">E-mail</label>
+            </div>
 
+            <div class="label-float">
+                <input type="password" id="senha" class="senha" placeholder="" required>
+                <label id="labelSenha" for="Senha">Senha</label>
+                <i class="fa fa-eye" aria-hidden="true"></i>
 
-    </form>
+            </div>
+
+            <div class="label-float">
+                <input type="password" id="confirmeSenha" placeholder="" required>
+                <label id="labelConfirmeSenha" for="Confirmar-senha">Confirmar senha</label>
+                <i id="verConfirmeSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class="justify-center">
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+            
+            <div class="justify-center">
+                <hr>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
